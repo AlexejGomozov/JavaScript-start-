@@ -1,0 +1,29 @@
+/* In the program, define a non-empty field at the beginning, where the values are the names of employees (strings) and their salaries (natural numbers).
+
+Write a program that lists the salary and name of the employee with the highest salary after making the following salary adjustment. All employees,
+those who have less than the average salary (when calculating it, use integer division) and at the same time their name begins with "K" will be added 10 % of their current salary.*/
+
+
+  let zamen = [['Karel', 22000],['Pavel', 23000],['Jiri', 24000],['Klara', 23200]]. 
+
+     console.log((richMzda(mzda(zamen),zamen)))  
+
+        function mzda(n){
+         let zam=0;
+          let aver
+           for(let i =0; i<n.length; i++){
+            zam += (n[i][1]);    
+             }
+              aver = zam/(n.length);
+               return aver;
+                }
+
+                          function richMzda(averN, zamenN){
+                            for(let i =0; i<zamenN.length; i++){  
+                              if( zamenN[i][1]<averN && zamenN[i][0][0]==='K') {
+                                zamenN[i][1]*=1.1
+                                  return zamenN[i]
+                                    }
+                                     }
+                                      }
+         //  [ 'Karel', 24200.000000000004 ]                           
